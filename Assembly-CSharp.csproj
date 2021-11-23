@@ -55,17 +55,25 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Movie.cs" />
     <Compile Include="Assets\Scripts\RandomSpawn.cs" />
-    <Compile Include="Assets\Scripts\Destroy.cs" />
-    <Compile Include="Assets\Scripts\MovieOne.cs" />
-    <Compile Include="Assets\Scripts\SecondRandomSpawn.cs" />
     <Compile Include="Assets\Scripts\MovieTwo.cs" />
     <Compile Include="Assets\Scripts\ThirdRandomSpawn.cs" />
-    <Compile Include="Assets\Scripts\FourRandomSpawn.cs" />
+    <Compile Include="Assets\Scripts\SecondRandomSpawn.cs" />
+    <Compile Include="Assets\Scripts\MovieOne.cs" />
     <Compile Include="Assets\Scripts\MovieFour.cs" />
+    <Compile Include="Assets\Scripts\Destroy.cs" />
+    <Compile Include="Assets\Scripts\FourRandomSpawn.cs" />
+    <Compile Include="Assets\Scripts\1 and 3 Traffic lights\LightSpecialRed.cs" />
+    <Compile Include="Assets\Scripts\1 and 3 Traffic lights\LigthSpecialYellow.cs" />
+    <Compile Include="Assets\Scripts\1 and 3 Traffic lights\LightSpecialGreen.cs" />
+    <Compile Include="Assets\Scripts\2 and 4 Traffic lights\LightSpecialRedSecond.cs" />
+    <Compile Include="Assets\Scripts\2 and 4 Traffic lights\LightSpecialYellowSecond.cs" />
+    <Compile Include="Assets\Scripts\2 and 4 Traffic lights\LightSpecialGreenSecond.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Road\kenney_citykitroads\License.txt" />
     <None Include="Assets\Models\City\License.txt" />
     <None Include="Assets\Models\Road\kenney_citykitroads\License.txt" />
+    <None Include="Assets\Client\Scenes\Materials\LinearGradientBGPixel3Color.shader" />
     <None Include="Assets\Models\Car\License.txt" />
   </ItemGroup>
   <ItemGroup>

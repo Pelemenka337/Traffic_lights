@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 7103377728031199078}
   - component: {fileID: 8593067335378577139}
   - component: {fileID: 5157764791575291623}
+  - component: {fileID: 872039568548709996}
   m_Layer: 0
   m_Name: sedanSports (1)
   m_TagString: Untagged
@@ -279,7 +280,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   car: {fileID: 0}
+  Light_First: {fileID: 0}
+  IsOnTrigger: 0
   wheels: []
+--- !u!65 &872039568548709996
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2434184407238429588}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.5250282, z: 2.7}
+  m_Center: {x: 0, y: 0.92671907, z: -0.8438956}
 --- !u!1 &2599818004392305225
 GameObject:
   m_ObjectHideFlags: 0

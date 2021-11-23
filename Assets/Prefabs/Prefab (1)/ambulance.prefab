@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6865136830574898626}
   - component: {fileID: 2016518477611662970}
   - component: {fileID: -4090906502920034443}
+  - component: {fileID: 6423727403119647946}
   m_Layer: 0
   m_Name: ambulance
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173771080866970319}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -172.66, y: -0.010708809, z: -7.57}
+  m_LocalPosition: {x: -172.66, y: -0.37, z: -7.57}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 2305884074534511265}
@@ -70,6 +71,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   car: {fileID: 0}
+  Light_First: {fileID: 0}
+  IsOnTrigger: 0
   wheels: []
 --- !u!114 &-4090906502920034443
 MonoBehaviour:
@@ -83,6 +86,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ebf75d79fbd4f84db688f29fcffe579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &6423727403119647946
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173771080866970319}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.5250282, z: 2.7}
+  m_Center: {x: 0, y: 0.92671907, z: -0.8438956}
 --- !u!1 &556975763635933970
 GameObject:
   m_ObjectHideFlags: 0

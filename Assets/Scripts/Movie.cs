@@ -7,9 +7,13 @@ public class Movie : MonoBehaviour
     public Rigidbody rb;
     public GameObject car;
 
-    private float speed = 0.1f; //Скорость на старте
+    public LightSpecialGreen Light_First;
 
-    private float maxSpeed = 0.5f; //Максимальная скорость
+    public bool IsOnTrigger = false;
+
+    private float speed = 0.2f; //Скорость на старте
+
+    private float maxSpeed = 0.6f; //Максимальная скорость
     private float minSpeed = 0.1f; //Минимальная скорость
 
     public List<GameObject> wheels; //Колёса машины
@@ -21,7 +25,7 @@ public class Movie : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float newSpeed = speed; //Скорость движения вперёд
+        float newSpeed = Random.Range(0.3f,0.6f); //Скорость движения вперёд
         float sideSpeed = 0f; //Скорость движения вбок
 
         if (newSpeed > maxSpeed)
@@ -34,7 +38,13 @@ public class Movie : MonoBehaviour
             newSpeed = minSpeed; //Проверка на слишком низкую скорость
         }
 
-        transform.position = new Vector3(transform.position.x + newSpeed, transform.position.y, transform.position.z + 0.1f * sideSpeed);
+
+
+        if (!IsOnTrigger) 
+        {
+            //transform.position = new Vector3(transform.position.x + newSpeed, transform.position.y, transform.position.z + 0.1f * sideSpeed);
+            transform.Translate(new Vector3(0f, 0f, 75f * Time.deltaTime * newSpeed));
+        }
 
         //if (control != null)
         //{
@@ -47,6 +57,23 @@ public class Movie : MonoBehaviour
             {
                 wheel.transform.Rotate(-3f, 0f, 0f); //Вращение каждого колеса по оси X
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!other.CompareTag("Destr") && other.transform.position.x > transform.position.x) 
+        {
+            Debug.Log(other.gameObject.name);
+            IsOnTrigger = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (!other.CompareTag("Destr"))
+        {
+            Debug.Log(other.gameObject.name);
+            IsOnTrigger = false;
         }
     }
 }

@@ -6,6 +6,7 @@ public class RandomSpawn : MonoBehaviour
 {
     public GameObject[] objects;
     private int random;
+    public LightSpecialGreen Light_First;
 
     private void Start()
     {
@@ -14,7 +15,7 @@ public class RandomSpawn : MonoBehaviour
 
     IEnumerator RandomCoroutine()
     {
-        random = Random.Range(1, 4);
+        random = Random.Range(3, 6);
         yield return new WaitForSeconds(random);
         random = Random.Range(0, objects.Length);
         RandomSpawns();
@@ -23,7 +24,9 @@ public class RandomSpawn : MonoBehaviour
 
     private void RandomSpawns()
     {
-        Instantiate(objects[random], transform.position, Quaternion.Euler(0,90,0));
+        GameObject GO = Instantiate(objects[random], transform.position, Quaternion.Euler(0,90,0));
+        Movie movie = GO.GetComponent<Movie>();
+        movie.Light_First = Light_First;
     }
     void Repeat()
     {

@@ -14,7 +14,7 @@ public class FourRandomSpawn : MonoBehaviour
 
     IEnumerator RandomCoroutine()
     {
-        random = Random.Range(1, 4);
+        random = Random.Range(3, 6);
         yield return new WaitForSeconds(random);
         random = Random.Range(0, objects.Length);
         RandomSpawns();
