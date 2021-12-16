@@ -42,14 +42,8 @@ public class Movie : MonoBehaviour
 
         if (!IsOnTrigger) 
         {
-            //transform.position = new Vector3(transform.position.x + newSpeed, transform.position.y, transform.position.z + 0.1f * sideSpeed);
             transform.Translate(new Vector3(0f, 0f, 75f * Time.deltaTime * newSpeed));
         }
-
-        //if (control != null)
-        //{
-        //    control.sideSpeed = 0f; //Сброс боковой скорости
-        //}
 
         if (wheels.Count > 0) //Если есть колёса
         {
