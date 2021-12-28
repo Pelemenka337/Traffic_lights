@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 359715543541748021}
   m_Layer: 0
   m_Name: sedan (2)
-  m_TagString: Untagged
+  m_TagString: Back
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -378,6 +378,8 @@ MonoBehaviour:
   car: {fileID: 0}
   Light_First: {fileID: 0}
   IsOnTrigger: 0
+  rotat: 0
+  check: 0
   wheels: []
 --- !u!65 &359715543541748021
 BoxCollider:
@@ -390,8 +392,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.5250282, z: 2.7}
-  m_Center: {x: 0, y: 0.92671907, z: -0.8438956}
+  m_Size: {x: 1.2953293, y: 1.5250282, z: 2.7000003}
+  m_Center: {x: 0.14766411, y: 0.92671907, z: -0.8438956}
 --- !u!1 &5462333357069867020
 GameObject:
   m_ObjectHideFlags: 0

@@ -56,25 +56,37 @@
     <Compile Include="Assets\Scripts\Movie.cs" />
     <Compile Include="Assets\Scripts\2 and 4 Traffic lights\LightSpecialGreenSecond.cs" />
     <Compile Include="Assets\Scripts\1 and 3 Traffic lights\LightSpecialGreen.cs" />
-    <Compile Include="Assets\Scripts\RandomSpawn.cs" />
+    <Compile Include="Assets\Scripts\Spawns\RandomSpawn.cs" />
+    <Compile Include="Assets\Scripts\Spawns\SecondRandomSpawnss.cs" />
+    <Compile Include="Assets\Scripts\Triggers For Men\RightTurn.cs" />
+    <Compile Include="Assets\Scripts\Spawns\FourRandomSpawnss.cs" />
+    <Compile Include="Assets\Scripts\Spawns\ThirdRandomSpawnss.cs" />
+    <Compile Include="Assets\Scripts\ManMovement\ManMovement.cs" />
+    <Compile Include="Assets\Scripts\Spawns\RandomSpawnss.cs" />
     <Compile Include="Assets\Scripts\MovieTwo.cs" />
     <Compile Include="Assets\Scripts\2 and 4 Traffic lights\LightSpecialYellowSecond.cs" />
-    <Compile Include="Assets\Scripts\ThirdRandomSpawn.cs" />
-    <Compile Include="Assets\Scripts\SecondRandomSpawn.cs" />
+    <Compile Include="Assets\Scripts\Spawns\ThirdRandomSpawn.cs" />
+    <Compile Include="Assets\Scripts\Exits.cs" />
+    <Compile Include="Assets\Scripts\Spawns\SecondRandomSpawn.cs" />
     <Compile Include="Assets\Scripts\1 and 3 Traffic lights\LigthSpecialYellow.cs" />
     <Compile Include="Assets\Scripts\MovieOne.cs" />
     <Compile Include="Assets\Scripts\MovieFour.cs" />
     <Compile Include="Assets\Scripts\Destroy.cs" />
     <Compile Include="Assets\Scripts\1 and 3 Traffic lights\LightSpecialRed.cs" />
-    <Compile Include="Assets\Scripts\FourRandomSpawn.cs" />
+    <Compile Include="Assets\Scripts\Spawns\FourRandomSpawn.cs" />
     <Compile Include="Assets\Scripts\2 and 4 Traffic lights\LightSpecialRedSecond.cs" />
-    <Compile Include="Assets\Scripts\Exits.cs" />
+    <Compile Include="Assets\Scripts\Spawns\Spawns For People\Spawn_90.cs" />
+    <Compile Include="Assets\Scripts\Spawns\Spawns For People\Spawn_0.cs" />
+    <Compile Include="Assets\Scripts\ManMovement\ManMovement_0.cs" />
+    <Compile Include="Assets\Scripts\Spawns\Spawns For People\Spawn_270.cs" />
+    <Compile Include="Assets\Scripts\Spawns\Spawns For People\Spawn_180.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Road\kenney_citykitroads\License.txt" />
     <None Include="Assets\Models\City\License.txt" />
     <None Include="Assets\Models\Road\kenney_citykitroads\License.txt" />
     <None Include="Assets\Client\Scenes\Materials\LinearGradientBGPixel3Color.shader" />
+    <None Include="Assets\Ergin3d\Santa Claus\readme.txt" />
     <None Include="Assets\Models\Car\License.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -648,48 +660,38 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.22f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualStudio.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PlasticSCM.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Rider.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.VSCode.Editor.csproj">
-      <Project>{DF40A574-AC3F-7E71-387B-C75E4D339A03}</Project>
-      <Name>Unity.VSCode.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{CA122A3D-3B01-9B86-4CF3-B1A0255E9702}</Project>
-      <Name>Unity.TextMeshPro.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
-      <Project>{8AF06AAD-4936-2B76-9DAD-682F6FDAB45A}</Project>
-      <Name>Unity.VisualStudio.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{9A19438C-7A90-E2D0-D357-8647B11E0926}</Project>
-      <Name>Unity.Timeline.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{BFAFA9F7-59BF-DCAC-155E-7537AF4963BF}</Project>
-      <Name>Unity.Timeline</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{6D6E8A35-256F-7960-D47B-17C3894EDEC6}</Project>
-      <Name>Unity.TextMeshPro</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{908C7937-7C36-F5F3-BE84-B995E4B668C2}</Project>
-      <Name>UnityEditor.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
-      <Project>{AFA1F643-3E0C-F6BB-FA89-4D468F5A6374}</Project>
-      <Name>Unity.PlasticSCM.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Rider.Editor.csproj">
-      <Project>{C51CBF72-2FE7-B716-B596-8D507FA782BA}</Project>
-      <Name>Unity.Rider.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{2B757977-36AF-0F2D-A7DB-CC58E87CBC07}</Project>
-      <Name>UnityEngine.UI</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

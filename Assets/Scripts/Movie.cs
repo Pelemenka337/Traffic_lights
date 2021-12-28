@@ -11,10 +11,13 @@ public class Movie : MonoBehaviour
 
     public bool IsOnTrigger = false;
 
-    private float speed = 0.2f; //Скорость на старте
+    public int rotat = 0;
+    public bool check = false;
 
-    private float maxSpeed = 0.6f; //Максимальная скорость
-    private float minSpeed = 0.1f; //Минимальная скорость
+    private float speed = 25f; //Скорость на старте
+
+    private float maxSpeed = 35f; //Максимальная скорость
+    private float minSpeed = 25f; //Минимальная скорость
 
     public List<GameObject> wheels; //Колёса машины
     void Start()
@@ -22,11 +25,12 @@ public class Movie : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+
+
     // Update is called once per frame
     void Update()
     {
-        float newSpeed = Random.Range(0.3f,0.6f); //Скорость движения вперёд
-        float sideSpeed = 0f; //Скорость движения вбок
+        float newSpeed = Random.Range(25f,35f); //Скорость движения вперёд
 
         if (newSpeed > maxSpeed)
         {
@@ -42,7 +46,7 @@ public class Movie : MonoBehaviour
 
         if (!IsOnTrigger) 
         {
-            transform.Translate(new Vector3(0f, 0f, 75f * Time.deltaTime * newSpeed));
+            transform.Translate(Vector3.forward * Time.deltaTime * newSpeed);
         }
 
         if (wheels.Count > 0) //Если есть колёса
@@ -56,7 +60,16 @@ public class Movie : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("Destr") && other.transform.position.x > transform.position.x) 
+        if (check == false && other.CompareTag("Right_First"))
+        {
+            rotat = Rot();
+            check = true;
+            if (rotat == 2)
+            {
+                transform.Rotate(0, 90, 0);
+            }
+        }
+        if ((other.CompareTag("Traf_Light") || other.CompareTag("Back")) && other.transform.position.x > transform.position.x) 
         {
             Debug.Log(other.gameObject.name);
             IsOnTrigger = true;
@@ -64,10 +77,14 @@ public class Movie : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (!other.CompareTag("Destr"))
+        if (other.CompareTag("Traf_Light") || other.CompareTag("Back"))
         {
             Debug.Log(other.gameObject.name);
             IsOnTrigger = false;
         }
+    }
+    public int Rot()
+    {
+        return Random.Range(1, 5);
     }
 }

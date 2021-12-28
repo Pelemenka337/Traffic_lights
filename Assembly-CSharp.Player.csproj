@@ -56,19 +56,23 @@
     <Compile Include="Assets\Scripts\Movie.cs" />
     <Compile Include="Assets\Scripts\2 and 4 Traffic lights\LightSpecialGreenSecond.cs" />
     <Compile Include="Assets\Scripts\1 and 3 Traffic lights\LightSpecialGreen.cs" />
-    <Compile Include="Assets\Scripts\RandomSpawn.cs" />
+    <Compile Include="Assets\Scripts\Spawns\RandomSpawn.cs" />
     <Compile Include="Assets\Scripts\MovieTwo.cs" />
     <Compile Include="Assets\Scripts\2 and 4 Traffic lights\LightSpecialYellowSecond.cs" />
-    <Compile Include="Assets\Scripts\ThirdRandomSpawn.cs" />
-    <Compile Include="Assets\Scripts\SecondRandomSpawn.cs" />
+    <Compile Include="Assets\Scripts\Spawns\ThirdRandomSpawn.cs" />
+    <Compile Include="Assets\Scripts\Exits.cs" />
+    <Compile Include="Assets\Scripts\Spawns\SecondRandomSpawn.cs" />
     <Compile Include="Assets\Scripts\1 and 3 Traffic lights\LigthSpecialYellow.cs" />
     <Compile Include="Assets\Scripts\MovieOne.cs" />
     <Compile Include="Assets\Scripts\MovieFour.cs" />
     <Compile Include="Assets\Scripts\Destroy.cs" />
     <Compile Include="Assets\Scripts\1 and 3 Traffic lights\LightSpecialRed.cs" />
-    <Compile Include="Assets\Scripts\FourRandomSpawn.cs" />
+    <Compile Include="Assets\Scripts\Spawns\FourRandomSpawn.cs" />
     <Compile Include="Assets\Scripts\2 and 4 Traffic lights\LightSpecialRedSecond.cs" />
-    <Compile Include="Assets\Scripts\Exits.cs" />
+    <Compile Include="Assets\Scripts\Spawns\RandomSpawnss.cs" />
+    <Compile Include="Assets\Scripts\Spawns\SecondRandomSpawnss.cs" />
+    <Compile Include="Assets\Scripts\Spawns\ThirdRandomSpawnss.cs" />
+    <Compile Include="Assets\Scripts\Spawns\FourRandomSpawnss.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Road\kenney_citykitroads\License.txt" />

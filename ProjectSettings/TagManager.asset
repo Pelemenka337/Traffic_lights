@@ -6,6 +6,16 @@ TagManager:
   tags:
   - Destroy
   - Destr
+  - Right_First
+  - Left_First
+  - Traf_Light
+  - Back
+  - Right_Second
+  - Right_Third
+  - Right_Four
+  - Man
+  - RightTurnForMan
+  - LeftTurnForMan
   layers:
   - Default
   - TransparentFX
