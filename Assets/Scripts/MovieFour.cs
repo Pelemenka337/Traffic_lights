@@ -18,6 +18,7 @@ public class MovieFour : MonoBehaviour
 
     private float maxSpeed = 35f; //Максимальная скорость
     private float minSpeed = 25f; //Минимальная скорость
+    public bool IsRotate = false;
 
     public List<GameObject> wheels; //Колёса машины
     void Start()
@@ -44,6 +45,10 @@ public class MovieFour : MonoBehaviour
         {
             transform.Translate(Vector3.forward * Time.deltaTime * newSpeed);
         }
+        if (IsRotate)
+        {
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, -90, 0), Time.deltaTime * 75f);
+        }
 
         if (wheels.Count > 0) //Если есть колёса
         {
@@ -61,7 +66,7 @@ public class MovieFour : MonoBehaviour
             check = true;
             if (rotat == 2)
             {
-                transform.Rotate(0, 90, 0);
+                IsRotate = true;
             }
         }
         if ((other.CompareTag("Traf_Light") || other.CompareTag("Back")) && other.transform.position.z < transform.position.z)
